@@ -21,17 +21,52 @@ Temporal CNNs (Convolutional Neural Networks for time-series data) offer an effi
 
 For SOC estimation, we used sequences of length 100, capturing the temporal dependencies in the SOC data over a fixed time window.
 
-## 🔧 Model Architecture
+## 🏗️ Model Architecture
 
-Our final model is a **Temporal CNN** that includes:
-- **Conv1D Layers**: For capturing temporal dependencies in the SOC sequences.
-- **Dense Layers**: For final SOC prediction, with dropout and L2 regularization to minimize overfitting.
+The model architecture for SOC estimation is designed as a Temporal CNN, leveraging a series of convolutional layers to capture temporal dependencies in the SOC data. This approach allows the model to learn from sequences without the need for recurrent layers, providing efficient training and accurate predictions.
 
-**Hyperparameters:**
-- **Sequence Length**: 100
-- **Embedding Dimension**: 64
-- **Dropout Rate**: 0.4
-- **Regularization**: L2 penalty
+### 🔹 Architecture Overview
+
+1. **Input Layer**: 
+   - Accepts input sequences with a shape of `(100, num_features)`, where `100` is the sequence length.
+
+2. **First Convolutional Block**
+   - **Conv1D Layer**: 64 filters, kernel size of 3, ReLU activation.
+   - **Batch Normalization**: Helps stabilize the learning process.
+   - **Dropout**: 30% to prevent overfitting.
+   - **Purpose**: Captures the initial temporal dependencies in the SOC data.
+
+3. **Second Convolutional Block**
+   - **Conv1D Layer**: 128 filters, kernel size of 5, ReLU activation.
+   - **Batch Normalization**: Ensures stable gradients and faster convergence.
+   - **Dropout**: 30% for regularization.
+   - **Purpose**: Expands on the temporal patterns identified in the first block, capturing more intricate relationships.
+
+4. **Third Convolutional Block**
+   - **Conv1D Layer**: 256 filters, kernel size of 5, ReLU activation.
+   - **Batch Normalization** and **Dropout (40%)**: Helps maintain model stability and reduces overfitting.
+   - **Purpose**: Allows the model to learn deeper temporal features, critical for accurately predicting SOC over longer sequences.
+
+5. **Global Average Pooling Layer**
+   - **GlobalAveragePooling1D**: Reduces data dimensionality while retaining essential information.
+   - **Purpose**: Summarizes the most relevant temporal features from each filter for final dense layers.
+
+6. **Fully Connected Dense Layers**
+   - **Dense Layer**: 64 units with ReLU activation and L2 regularization.
+   - **Dropout**: 40% for robust regularization.
+   - **Purpose**: Learns high-level representations based on the pooled features, ensuring good generalization.
+
+7. **Output Layer**
+   - **Dense Layer**: 1 unit with linear activation for SOC regression.
+   - **Purpose**: Provides the final SOC estimation, outputting a continuous value representing the predicted SOC.
+
+---
+
+### 🤖 Why Temporal CNN?
+
+The Temporal CNN is chosen for its efficiency in handling sequential data without the complexity of recurrent connections. By stacking convolutional layers, the model captures temporal dependencies and local patterns, making it particularly effective for SOC data with fluctuating trends across different temperatures. Regularization techniques such as dropout and L2 regularization ensure robustness, reducing overfitting even with complex SOC patterns.
+
+---
 
 ## ⚙️ Training and Evaluation
 
