@@ -238,3 +238,38 @@ This analysis provides valuable insights into areas for model refinement, especi
 ### 📊 Residuals vs. Predicted SOC for Different Temperatures
 
 ![Residuals vs. Predicted SOC for Different Temperatures](results/residuals_vs_predicted_soc_temperatures.png)
+
+## 🤝 Contribution
+
+We welcome contributions to enhance the SOC estimation model. To contribute:
+
+1. Fork this repository.
+2. Create a new branch with a descriptive name (e.g., `improve-ekf-integration`).
+3. Make your modifications, including code, documentation, or tests.
+4. Submit a pull request (PR) with a detailed description of your changes.
+
+### Ways to Contribute
+- **Enhancements**: Improve the model, add new features, or optimize the existing code.
+- **Documentation**: Improve readability or add details to help users understand and use the project.
+- **Bug Fixes**: Identify and resolve issues or bugs in the project.
+
+All contributors are encouraged to follow the established coding conventions and to document significant changes. Your contributions are greatly appreciated and will help make this project better for everyone!
+
+## 📄 Dataset Reference
+
+The dataset used for this SOC estimation model originates from research conducted at McMaster University, Ontario, Canada by Dr. Phillip Kollmeyer and colleagues. The data is publicly available and includes testing details for an LG 18650HG2 battery cell, covering various conditions.
+
+**Reference**:
+- Kollmeyer, P., et al. (2020). *LG 18650HG2 Li-ion Battery Data and Example Deep Neural Network xEV SOC Estimator Script.* Mendeley Data. [Link to Dataset](https://data.mendeley.com/datasets/xxxxxx/1)
+
+Please ensure compliance with the dataset's terms of use and citation requirements.
+
+## 🙏 Acknowledgments
+
+We would like to acknowledge:
+
+- **Dr. Phillip Kollmeyer and the McMaster University team** for providing the foundational battery dataset used in this project.
+- **OpenAI and the Open-Source Community** for valuable resources, tools, and libraries that support machine learning development.
+- **Contributors** who help improve and maintain this project through code, documentation, or feedback.
+
+Special thanks to all users and collaborators who contribute ideas and improvements, making this project impactful in the field of battery SOC estimation and management.
