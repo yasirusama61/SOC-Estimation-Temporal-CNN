@@ -25,9 +25,11 @@ For SOC estimation, we used sequences of length 100, capturing the temporal depe
 
 The model architecture for SOC estimation is designed as a Temporal CNN, leveraging a series of convolutional layers to capture temporal dependencies in the SOC data. This approach allows the model to learn from sequences without the need for recurrent layers, providing efficient training and accurate predictions.
 
-The following diagram illustrates the architecture of our Temporal CNN model designed for precise State of Charge (SOC) prediction.
+The diagram below provides an integrated view of our Temporal CNN model, designed for accurate State of Charge (SOC) prediction in lithium-ion batteries. 
 
-![Temporal CNN Architecture](results/temporal_cnn_architecture.png)
+On the left, the high-level architecture outlines the flow of data through each stage, capturing the essential structure of convolutional layers followed by pooling and dense layers. On the right, the Netron-generated model diagram details each layer's configurations, including kernel sizes, biases, and activation functions. Together, these visuals highlight the model’s capability to extract temporal features effectively, refine them through pooling and dense layers, and output a continuous SOC prediction.
+
+![Temporal CNN Model Architecture](results/combined_architecture.png)
 
 ### 🔹 Architecture Overview
 
@@ -63,12 +65,6 @@ The following diagram illustrates the architecture of our Temporal CNN model des
 7. **Output Layer**
    - **Dense Layer**: 1 unit with linear activation for SOC regression.
    - **Purpose**: Provides the final SOC estimation, outputting a continuous value representing the predicted SOC.
-
-To illustrate the exact flow and parameters of each layer, here is the Netron-generated model diagram:
-
-![Netron Model Diagram](results/netron_model_diagram.png)
-
-This diagram provides an in-depth view of the model's architecture, including kernel sizes, biases, and activations at each layer, helping to understand how the model processes and refines data through each stage.
 
 ---
 
