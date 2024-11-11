@@ -64,7 +64,7 @@ matplotlib
 plotly
 ```
 
-## Results
+## 📈 Results
 
 The Temporal CNN model demonstrated exceptional performance across various temperature conditions, maintaining high accuracy and minimal error. Key results for each temperature setting are summarized below:
 
@@ -75,7 +75,7 @@ The Temporal CNN model demonstrated exceptional performance across various tempe
 | 10°C        | 0.0115                    | 0.00026                   | 0.9966         |
 | 25°C        | 0.0153                    | 0.0004                    | 0.9953         |
 
-### Insights
+### 🔍 Insights
 
 - **Consistency Across Temperatures**: The model achieved high R² scores (above 0.99) across all tested temperatures, showcasing its robustness and suitability for diverse environmental conditions.
 - **Reduced SOC Fluctuations**: Compared to previous LSTM-based models, the Temporal CNN significantly minimized prediction fluctuations, especially in challenging conditions like -10°C, providing stable and reliable SOC estimates.
