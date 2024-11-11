@@ -81,23 +81,50 @@ Below is a summary of the model architecture, detailing the output shapes and pa
 - Loss Function: Mean Squared Error (MSE).
 - Batch Size: 72.
 
+**Training Process**:
+- The model was trained for up to 50 epochs, but early stopping was applied, with the best validation performance achieved at **Epoch 32**.
+- Initial learning rate was set to `5e-4`, and was reduced by half whenever the validation loss plateaued for several epochs.
+- By **Epoch 32**, the model reached a validation loss of `3.0319e-04` and a validation MAE of `0.0125`, indicating precise alignment with the actual SOC values.
+
 **Performance Metrics**:
 - **Mean Absolute Error (MAE)**: 0.0074
 - **Mean Squared Error (MSE)**: 0.0002
 - **Root Mean Squared Error (RMSE)**: 0.0141 (1.41% of SOC range)
 - **R-squared (R²)**: 0.9978
 
-### 📉 Training Loss and Validation Loss
+### 📉 Training and Validation Loss
 
-The following plot shows the model’s training and validation loss over the 50 training epochs:
+The following plot shows the model’s training and validation loss over the epochs:
 
 ![Training and Validation Loss](results/training_validation_loss_plot.png)
 
 **Insights**:
-- The **training loss** rapidly decreases during the initial epochs, indicating that the model learns quickly at the beginning.
-- Both **training** and **validation loss** converge and stabilize at low values, with no signs of overfitting or underfitting. This suggests that the model generalizes well to the validation data.
-- The stable convergence of both losses highlights that the Temporal CNN architecture and training settings (e.g., dropout layers, batch normalization, and regularization) effectively manage the model’s complexity and prevent overfitting.
-- This smooth convergence, along with the low error metrics, confirms the model's robustness in accurately predicting SOC across different temperatures.
+- The **training loss** rapidly decreased in the initial epochs, reflecting quick adaptation to the SOC estimation task.
+- Both **training** and **validation loss** converged smoothly without overfitting, showing the model's robustness.
+- The learning rate reduction helped fine-tune the model's performance, improving validation accuracy and reducing validation loss as the training progressed.
+- The final performance metrics and the low RMSE across different temperature conditions indicate that the Temporal CNN model effectively captures SOC dynamics, even at varying temperatures.
+
+### 🛠️ Overfitting Control Strategies
+
+To ensure the model generalizes well across different datasets and temperature conditions, we implemented several strategies to control overfitting:
+
+1. **Early Stopping**: 
+   - We used the `EarlyStopping` callback to monitor validation loss, with a patience of 10 epochs. This allows training to halt if no improvement is observed, preventing unnecessary overfitting.
+   - This strategy restores the best weights observed during training, ensuring the model achieves optimal performance on validation data.
+
+2. **Learning Rate Reduction on Plateau**: 
+   - A `ReduceLROnPlateau` callback was used to halve the learning rate if validation loss plateaued for 5 epochs. This approach allows the model to converge more effectively by making finer adjustments as it approaches the optimal solution.
+   - Starting with a learning rate of `5e-4`, the model’s learning rate was progressively lowered as training progressed, improving convergence and validation performance.
+
+3. **Model Checkpointing**:
+   - The `ModelCheckpoint` callback saves only the best model (based on validation loss), ensuring that the best version of the model is saved and reducing the risk of saving an overfitted model.
+
+4. **Dropout and Batch Normalization**:
+   - The model architecture includes **Dropout** layers with varying dropout rates (0.3 - 0.4) after convolutional and dense layers to reduce overfitting by randomly deactivating a percentage of neurons during each training pass.
+   - **Batch Normalization** layers are also added after convolutional layers to stabilize training by normalizing activations, allowing the model to learn more robust features and enhancing generalization.
+
+These overfitting control techniques collectively contributed to a stable training process, with training and validation losses converging smoothly and achieving high accuracy on test data across different temperature conditions.
+
 
 ## 📜 Requirements
 
