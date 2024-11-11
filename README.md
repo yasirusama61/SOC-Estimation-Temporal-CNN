@@ -122,3 +122,40 @@ The visualizations below illustrate the close alignment between actual and predi
 ![SOC Prediction at -10°C](results/soc_prediction_plot_-10deg.png)
 ![SOC Prediction at 10°C](results/soc_prediction_plot_10deg.png)
 ![SOC Prediction at 25°C](results/soc_prediction_plot_25deg.png)
+
+### 🔍 SOC Prediction Error Analysis
+
+The following section provides an analysis of the SOC prediction errors for different ambient temperatures (-10°C, 0°C, 10°C, and 25°C), as visualized in the error plots.
+
+#### 📊 Key Insights:
+1. **Overall Error Distribution**:
+   - Across all temperatures, the model maintains a low prediction error for most of the SOC range, highlighting its robustness and accuracy in tracking SOC trends.
+   - Prediction errors generally stay within a 0.05 (5%) range, with occasional spikes. This consistent performance demonstrates the model's reliability under various temperature conditions.
+
+2. **🌡️ Temperature-Specific Observations**:
+   - **0°C**:
+     - Error remains consistently low across most of the samples, with periodic spikes around significant SOC transitions.
+     - This suggests that the model performs well at 0°C, with minor deviations during rapid SOC changes.
+     - ![Prediction Error at 0°C](results/prediction_error_at_0C_plot.png)
+
+   - **10°C**:
+     - The error pattern is similar to that at 0°C, with slightly increased variability.
+     - Some notable error spikes appear around the middle of the SOC range, potentially due to transitional states where SOC estimation becomes more challenging.
+     - ![Prediction Error at 10°C](results/prediction_error_at_10C_plot.png)
+
+   - **-10°C**:
+     - At lower temperatures, the model encounters more variability in error, with more frequent and noticeable spikes.
+     - The largest errors appear during significant SOC drops, indicating that colder temperatures may affect the model’s response to rapid SOC changes.
+     - ![Prediction Error at -10°C](results/prediction_error_at_-10C_plot.png)
+
+   - **25°C**:
+     - The model shows stable performance with low error levels at 25°C, similar to 0°C.
+     - Error spikes are fewer and less pronounced, suggesting that the model performs best under moderate temperatures, likely due to reduced variability in battery dynamics at this range.
+     - ![Prediction Error at 25°C](results/prediction_error_at_25C_plot.png)
+
+3. **⚡ Error Spikes During SOC Transitions**:
+   - Common to all temperatures, error spikes are most frequent during periods of sharp SOC transitions, such as rapid charging or discharging phases.
+   - This indicates that while the model is highly accurate in steady-state conditions, high dynamic SOC changes pose more challenges, especially under extreme temperatures like -10°C.
+
+#### 📈 Summary:
+These error analyses provide valuable insights into the model's behavior across different temperature conditions. The results suggest that while the model achieves high accuracy, future improvements could focus on minimizing prediction variability during rapid SOC transitions, particularly at extreme temperatures like -10°C.
