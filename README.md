@@ -25,6 +25,10 @@ For SOC estimation, we used sequences of length 100, capturing the temporal depe
 
 The model architecture for SOC estimation is designed as a Temporal CNN, leveraging a series of convolutional layers to capture temporal dependencies in the SOC data. This approach allows the model to learn from sequences without the need for recurrent layers, providing efficient training and accurate predictions.
 
+The following diagram illustrates the architecture of our Temporal CNN model designed for precise State of Charge (SOC) prediction.
+
+![Temporal CNN Architecture](results/temporal_cnn_architecture.png)
+
 ### 🔹 Architecture Overview
 
 1. **Input Layer**: 
@@ -124,7 +128,6 @@ To ensure the model generalizes well across different datasets and temperature c
    - **Batch Normalization** layers are also added after convolutional layers to stabilize training by normalizing activations, allowing the model to learn more robust features and enhancing generalization.
 
 These overfitting control techniques collectively contributed to a stable training process, with training and validation losses converging smoothly and achieving high accuracy on test data across different temperature conditions.
-
 
 ## 📜 Requirements
 
