@@ -87,12 +87,6 @@ Below is a summary of the model architecture, detailing the output shapes and pa
 - **Root Mean Squared Error (RMSE)**: 0.0141 (1.41% of SOC range)
 - **R-squared (R²)**: 0.9978
 
-## 📈 Results
-
-![SOC Prediction Plot](results/soc_prediction_plot_0deg.png)
-
-Our CNN-based model demonstrates a strong fit to the actual SOC values, with minimal deviation. The results show promise for accurate SOC estimation under various ambient conditions.
-
 ## 📜 Requirements
 
 ```plaintext
