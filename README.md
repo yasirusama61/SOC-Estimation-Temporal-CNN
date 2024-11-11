@@ -207,3 +207,34 @@ The following section provides an analysis of the SOC prediction errors for diff
 
 #### 📈 Summary:
 These error analyses provide valuable insights into the model's behavior across different temperature conditions. The results suggest that while the model achieves high accuracy, future improvements could focus on minimizing prediction variability during rapid SOC transitions, particularly at extreme temperatures like -10°C.
+
+### 🔍 Insights from Residual Analysis Across Temperatures
+
+- **Systematic Error Patterns Across SOC Ranges**:
+  - At lower SOC values (below 0.5), residuals show more variation, especially at extreme temperatures (-10°C and 25°C).
+  - Residuals tend to cluster more tightly around zero in the mid-range SOC values (0.5–0.8), indicating better model performance in this range.
+
+- **Higher Residuals at Temperature Extremes**:
+  - At -10°C and 25°C, residuals are more spread out and intense, especially at low SOC values, suggesting less accuracy in extreme conditions.
+  - The model shows tendencies to overestimate or underestimate SOC in specific ranges, possibly due to the temperature’s impact on battery characteristics.
+
+- **Consistent Performance at Moderate Temperatures**:
+  - For 0°C and 10°C, residuals are generally lower and distributed more evenly, indicating improved accuracy at these temperatures.
+  - This trend suggests the model handles moderate temperatures better, likely due to training data conditions closer to these ranges.
+
+- **Residual Clustering Around Zero**:
+  - Across all temperatures, many residuals are centered around zero, showing accurate predictions in these regions.
+  - However, clusters of larger positive or negative residuals highlight areas where model refinement is needed.
+
+### Key Insights:
+- **SOC Dependency**: The model's accuracy varies across SOC levels, with larger residuals at low and high SOC values, particularly at extreme temperatures.
+- **Temperature Sensitivity**: The model may benefit from tuning or additional temperature-aware features to improve accuracy under extreme conditions.
+- **Opportunities for Model Improvement**: Exploring temperature-aware features or additional data augmentation could enhance model performance across diverse conditions, particularly for extreme temperatures.
+
+This analysis provides valuable insights into areas for model refinement, especially under conditions where battery behavior is more variable.
+
+---
+
+### 📊 Residuals vs. Predicted SOC for Different Temperatures
+
+![Residuals vs. Predicted SOC for Different Temperatures](results/residuals_vs_predicted_soc_temperatures.png)
