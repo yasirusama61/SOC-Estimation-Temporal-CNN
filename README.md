@@ -68,12 +68,12 @@ plotly
 
 The Temporal CNN model demonstrated exceptional performance across various temperature conditions, maintaining high accuracy and minimal error. Key results for each temperature setting are summarized below:
 
-| Temperature | Mean Absolute Error (MAE) | Mean Squared Error (MSE) | R-squared (R²) |
-|-------------|---------------------------|---------------------------|-----------------|
-| -10°C       | 0.0133                    | 0.00033                   | 0.9946         |
-| 0°C         | 0.0074                    | 0.0002                    | 0.9978         |
-| 10°C        | 0.0115                    | 0.00026                   | 0.9966         |
-| 25°C        | 0.0153                    | 0.0004                    | 0.9953         |
+| Temperature | Mean Absolute Error (MAE %) | Root Mean Squared Error (RMSE %) | R-squared (R²) |
+|-------------|-----------------------------|----------------------------------|-----------------|
+| -10°C       | 1.33%                       | 1.82%                            | 0.9946         |
+| 0°C         | 0.74%                       | 1.41%                            | 0.9978         |
+| 10°C        | 1.15%                       | 1.60%                            | 0.9966         |
+| 25°C        | 1.53%                       | 2.00%                            | 0.9953         |
 
 ### 🔍 Insights
 
