@@ -64,6 +64,12 @@ The following diagram illustrates the architecture of our Temporal CNN model des
    - **Dense Layer**: 1 unit with linear activation for SOC regression.
    - **Purpose**: Provides the final SOC estimation, outputting a continuous value representing the predicted SOC.
 
+To illustrate the exact flow and parameters of each layer, here is the Netron-generated model diagram:
+
+![Netron Model Diagram](results/netron_model_diagram.png)
+
+This diagram provides an in-depth view of the model's architecture, including kernel sizes, biases, and activations at each layer, helping to understand how the model processes and refines data through each stage.
+
 ---
 
 ### 🤖 Why Temporal CNN?
