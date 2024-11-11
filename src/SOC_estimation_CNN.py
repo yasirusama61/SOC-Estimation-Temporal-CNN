@@ -135,17 +135,23 @@ def plot_training_history(history):
 plot_training_history(history_cnn)
 
 # Load and process test data
+def load_test_data(test_file_path, input_columns, target_column):
+    df_test = load_mat_file(test_file_path, input_columns, target_column)
+    X_test = df_test[input_columns]
+    y_test = df_test[target_column]
+    return create_sequences(X_test.values, y_test.values, timesteps)
+
 test_file = 'Test/02_TEST_LGHG2@0degC_Norm_(05_Inputs).mat'
 X_test_seq, y_test_seq = load_test_data(test_file, input_columns, target_column)
 
 # Evaluate the model and plot predictions
 y_pred = cnn_model.predict(X_test_seq)
 mae = mean_absolute_error(y_test_seq, y_pred)
-mse = mean_squared_error(y_test_seq, y_pred)
+rmse = mean_squared_error(y_test_seq, y_pred, squared=False)
 r2 = r2_score(y_test_seq, y_pred)
 
 print(f"Mean Absolute Error: {mae}")
-print(f"Mean Squared Error: {mse}")
+print(f"Root Mean Squared Error: {rmse}")
 print(f"R-squared: {r2}")
 
 # Plot Actual vs Predicted SOC
@@ -156,4 +162,20 @@ plt.title('Actual vs Predicted SOC')
 plt.xlabel('Samples')
 plt.ylabel('SOC')
 plt.legend()
+plt.grid(True)
 plt.show()
+
+# Residual Plot
+def plot_residuals(y_test, y_pred, temp_label):
+    residuals = y_test - y_pred.flatten()
+    plt.figure(figsize=(12, 6))
+    plt.scatter(y_pred, residuals, alpha=0.5, color='purple')
+    plt.axhline(0, color='black', linestyle='--')
+    plt.xlabel('Predicted SOC')
+    plt.ylabel('Residuals')
+    plt.title(f'Residuals vs Predicted SOC for {temp_label}')
+    plt.grid(True)
+    plt.show()
+
+# Plot residuals for the test set
+plot_residuals(y_test_seq, y_pred, '0°C')
