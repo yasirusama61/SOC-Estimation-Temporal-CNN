@@ -87,6 +87,18 @@ Below is a summary of the model architecture, detailing the output shapes and pa
 - **Root Mean Squared Error (RMSE)**: 0.0141 (1.41% of SOC range)
 - **R-squared (R²)**: 0.9978
 
+### 📉 Training Loss and Validation Loss
+
+The following plot shows the model’s training and validation loss over the 50 training epochs:
+
+![Training and Validation Loss](results/training_validation_loss_plot.png)
+
+**Insights**:
+- The **training loss** rapidly decreases during the initial epochs, indicating that the model learns quickly at the beginning.
+- Both **training** and **validation loss** converge and stabilize at low values, with no signs of overfitting or underfitting. This suggests that the model generalizes well to the validation data.
+- The stable convergence of both losses highlights that the Temporal CNN architecture and training settings (e.g., dropout layers, batch normalization, and regularization) effectively manage the model’s complexity and prevent overfitting.
+- This smooth convergence, along with the low error metrics, confirms the model's robustness in accurately predicting SOC across different temperatures.
+
 ## 📜 Requirements
 
 ```plaintext
