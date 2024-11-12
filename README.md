@@ -296,6 +296,14 @@ We are in the process of deploying the Temporal CNN model on the NXP N94 MCU and
 
 > **Note**: These values are measured on one sample input CNN models on microcontrollers and may vary. More precise measurements will be updated after model deployment.
 
+## 🖥️ NXP N97 MCU Board
+
+This project will be deployed on the NXP N97 MCU. Below is an image of the board with labeled connectors and components, highlighting its capabilities for real-time inference and model deployment.
+
+![NXP N97 MCU Board](https://sc-a.digikeyassets.com/-/media/Images/Article%20Library/TechZone%20Articles/2022/August/How%20to%20Rapidly%20Deploy%20Edge-Ready%20Machine%20Learning%20Applications/article-2022august-how-to-rapidly-deploy-fig18.jpg?la=en&ts=c5a3e54b-71e6-453c-880e-9de3dde68f40) 
+
+> **Image Source**: NXP Semiconductors 
+
 ## 🤝 Contribution
 
 We welcome contributions to enhance the SOC estimation model. To contribute:
