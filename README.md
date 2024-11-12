@@ -249,9 +249,14 @@ This analysis provides valuable insights into areas for model refinement, especi
 
 ## 📊 Model Evaluation on Internal Test Data
 
-After training on the open-source dataset from original data, we tested the model using internal test data from our company. The plot below shows the comparison of actual and predicted SOC values using this internal test data, indicating that the model generalizes well across datasets:
+After training on the open-source dataset, we tested the model using internal test data from our company. The plot below shows the comparison of actual and predicted SOC values using this internal test data, indicating that the model generalizes well across datasets:
 
 ![Comparison of Actual and Predicted SOC on Company Test Data](results/SOC_test_internal.png)
+
+### Performance Metrics:
+- **Mean Absolute Error (MAE)**: 0.0168
+- **Mean Squared Error (MSE)**: 0.0004
+- **R-squared Score (R²)**: 0.9953
 
 ### Insights:
 - **Performance Consistency**: The model demonstrates consistent SOC prediction across different datasets, including the original dataset and our internal data.
