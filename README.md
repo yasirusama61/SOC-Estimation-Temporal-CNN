@@ -266,7 +266,7 @@ After training on the open-source dataset, we tested the model using internal te
 
 The following plot illustrates the comparison between actual and predicted SOC values on a 25°C test dataset, which includes different operational phases: dynamic discharge at the beginning, followed by OCV (Open Circuit Voltage) charge and discharge, and HPPC (Hybrid Pulse Power Characterization) cycles in the middle.
 
-![Comparison of Actual and Predicted SOC at 25°C](results/SOC_25deg_test.png)
+![Comparison of Actual and Predicted SOC at 25°C](results/SOC_test_internal_HPPC.png)
 
 ### Insights:
 - **Dynamic Discharge Performance**: At the beginning of the test, the model handles the rapid SOC changes seen in dynamic discharge well, showing close alignment between actual and predicted SOC values.
