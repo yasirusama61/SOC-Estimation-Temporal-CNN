@@ -247,6 +247,18 @@ This analysis provides valuable insights into areas for model refinement, especi
 
 ![Residuals vs. Predicted SOC for Different Temperatures](results/residuals_vs_predicted_soc_temperatures.png)
 
+## 📊 Model Evaluation on Internal Test Data
+
+After training on the open-source dataset from original data, we tested the model using internal test data from our company. The plot below shows the comparison of actual and predicted SOC values using this internal test data, indicating that the model generalizes well across datasets:
+
+![Comparison of Actual and Predicted SOC on Company Test Data](results/SOC_test_internal.png)
+
+### Insights:
+- **Performance Consistency**: The model demonstrates consistent SOC prediction across different datasets, including the original dataset and our internal data.
+- **Real-World Application**: Testing on internal company data validates the model's effectiveness in real-world scenarios beyond the training data.
+
+> **Note**: The internal test data is not shared in this repository to comply with company confidentiality policies.
+
 ## 🤝 Contribution
 
 We welcome contributions to enhance the SOC estimation model. To contribute:
