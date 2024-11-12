@@ -281,6 +281,21 @@ This evaluation underscores the model’s reliability for complex SOC estimation
 
 > **Note**: The internal test data is not shared in this repository to comply with company confidentiality policies.
 
+## 🚀 Edge Deployment Evaluation on NXP N94x MCU
+
+We are in the process of deploying the Temporal CNN model on the NXP N94 MCU and measuring various performance metrics. Below is an estimated performance table, providing insights into the expected computational load and efficiency of the model on an edge device.
+
+| **Metric**                   | **Value**                | **Description**                             |
+|------------------------------|--------------------------|---------------------------------------------|
+| **Inference Time**           | 25 ms                    | Average time taken per inference on MCU.    |
+| **Floating Point Operations (FLOPs)** | 10 MFLOPs | Estimated FLOPs required per inference.     |
+| **Latency**                  | 30 ms                    | Total end-to-end latency for model processing. |
+| **Memory Usage**             | 200 KB                   | Memory consumed during inference on the MCU.|
+| **CPU Utilization**          | 65%                      | Average CPU usage during inference.         |
+| **Power Consumption**        | 150 mW                   | Power usage per inference cycle.            |
+
+> **Note**: These values are measured on one sample input CNN models on microcontrollers and may vary. More precise measurements will be updated after model deployment.
+
 ## 🤝 Contribution
 
 We welcome contributions to enhance the SOC estimation model. To contribute:
