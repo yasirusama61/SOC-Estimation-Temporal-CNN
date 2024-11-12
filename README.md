@@ -137,6 +137,13 @@ These overfitting control techniques collectively contributed to a stable traini
 
 ## 📜 Requirements
 
+This project requires the following Python libraries, specified in `requirements.txt`. To install all dependencies, run:
+
+```bash
+pip install -r requirements.txt
+```
+### Key Dependencies
+
 ```plaintext
 tensorflow==2.x
 numpy
@@ -146,6 +153,7 @@ scikit-learn
 matplotlib
 plotly
 ```
+Ensure you have the compatible TensorFlow version (2.x) for optimal performance with the Temporal CNN model.
 
 ## 📈 Results
 
