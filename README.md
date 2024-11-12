@@ -262,6 +262,23 @@ After training on the open-source dataset, we tested the model using internal te
 - **Performance Consistency**: The model demonstrates consistent SOC prediction across different datasets, including the original dataset and our internal data.
 - **Real-World Application**: Testing on internal company data validates the model's effectiveness in real-world scenarios beyond the training data.
 
+## 📊 Model Evaluation on 25°C Test Data with HPPC and Dynamic Discharge Cycles
+
+The following plot illustrates the comparison between actual and predicted SOC values on a 25°C test dataset, which includes different operational phases: dynamic discharge at the beginning, followed by OCV (Open Circuit Voltage) charge and discharge, and HPPC (Hybrid Pulse Power Characterization) cycles in the middle.
+
+![Comparison of Actual and Predicted SOC at 25°C](results/SOC_25deg_test.png)
+
+### Insights:
+- **Dynamic Discharge Performance**: At the beginning of the test, the model handles the rapid SOC changes seen in dynamic discharge well, showing close alignment between actual and predicted SOC values.
+- **OCV Charge/Discharge Stability**: During the OCV charge and discharge phases, the model maintains high accuracy, capturing the gradual SOC transitions accurately. This indicates its effectiveness in steady-state conditions.
+- **HPPC Cycles Response**: The model demonstrates good predictive capability through the HPPC cycles in the middle of the test. These cycles, which involve rapid changes, test the model’s ability to react to quick SOC fluctuations, and the results indicate minimal lag or overshoot in predictions.
+
+### Overall Observations:
+- **Temperature Resilience**: Consistent performance across different phases of the test at 25°C suggests that the model is robust to ambient temperature changes and maintains accuracy in both dynamic and steady-state SOC conditions.
+- **Practical Application**: This test reflects real-world operating conditions, making the results promising for applications that require accurate SOC estimation across varied operational states, such as electric vehicles and energy storage systems.
+
+This evaluation underscores the model’s reliability for complex SOC estimation tasks across different charge/discharge patterns and ambient temperatures.
+
 > **Note**: The internal test data is not shared in this repository to comply with company confidentiality policies.
 
 ## 🤝 Contribution
