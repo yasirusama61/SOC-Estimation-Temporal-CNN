@@ -338,3 +338,8 @@ We would like to acknowledge:
 - **Contributors** who help improve and maintain this project through code, documentation, or feedback.
 
 Special thanks to all users and collaborators who contribute ideas and improvements, making this project impactful in the field of battery SOC estimation and management.
+
+## 📄 License
+
+This project is licensed under the MIT License, making it freely available for both private and commercial use, with proper attribution.
+
