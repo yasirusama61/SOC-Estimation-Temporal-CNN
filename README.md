@@ -281,6 +281,22 @@ This evaluation underscores the model’s reliability for complex SOC estimation
 
 > **Note**: The internal test data is not shared in this repository to comply with company confidentiality policies.
 
+## ⏲️ Model Inference Time on multiple temperature
+
+The following are the average inference times for the model across different ambient temperatures. These values are measured in milliseconds and calculated over multiple runs to ensure stable averages.
+
+| Ambient Temperature | Average Inference Time (ms) |
+|---------------------|-----------------------------|
+| -10°C               | 65.287 ms                   |
+| 0°C                 | 56.672 ms                   |
+| 10°C                | 62.191 ms                   |
+| 25°C                | 59.277 ms                   |
+
+### Insights
+- The inference times show consistent performance across varying temperatures, with minor fluctuations.
+- This data supports the model’s feasibility for real-time applications, as the inference times remain below 70 milliseconds across all temperatures.
+
+
 ## 🚀 Edge Deployment Evaluation on NXP N94x MCU
 
 We are in the process of deploying the Temporal CNN model on the NXP N94 MCU and measuring various performance metrics. Below is an estimated performance table, providing insights into the expected computational load and efficiency of the model on an edge device.
