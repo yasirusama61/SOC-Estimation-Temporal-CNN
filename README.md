@@ -411,6 +411,20 @@ Before deploying, convert the Temporal CNN model to TensorFlow Lite format for e
 ```bash
 python convert_model.py --model_path temporal_cnn_model.h5 --output_path temporal_cnn_model.tflite
 ```
+The script offers options for quantization to optimize model size and performance:
+
+- Int8 Quantization for maximum size reduction:
+```bash
+python convert_model.py --model_path temporal_cnn_model.h5 --output_path temporal_cnn_model_int8.tflite --quantization int8
+```
+- Float16 Quantization for a balance of speed and precision:
+```bash
+python convert_model.py --model_path temporal_cnn_model.h5 --output_path temporal_cnn_model_float16.tflite --quantization float16
+```
+- Dynamic Range Quantization for basic optimization:
+```bash
+python convert_model.py --model_path temporal_cnn_model.h5 --output_path temporal_cnn_model_
+```
 ## 🤝 Contribution
 
 We welcome contributions to enhance the SOC estimation model. To contribute:
