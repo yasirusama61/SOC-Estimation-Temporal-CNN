@@ -390,6 +390,27 @@ The radar chart below compares the **Mean Absolute Error (MAE)**, **Root Mean Sq
 - **LSTM** has slightly higher MAE and RMSE compared to Temporal CNN but performs well in terms of R².
 - **FNN** is the least accurate of the three models, with higher MAE and RMSE values, but it may be preferred in applications where lower latency or memory usage is prioritized.
 
+# Real-Time Inference Firmware for Temporal CNN
+
+This code demonstrates a real-time deployment of a Temporal CNN model on an embedded device running FreeRTOS. The firmware uses TensorFlow Lite for Microcontrollers to perform low-latency inference on streaming sensor data, making it suitable for real-time applications such as battery management, predictive maintenance, and anomaly detection.
+
+## 📄 Overview
+
+- **File**: `real_time_inference_firmware.cpp`
+- **Purpose**: To perform real-time inference on an embedded device, leveraging an RTOS to manage tasks efficiently and measure inference latency.
+- **Frameworks and Libraries**: 
+  - **TensorFlow Lite for Microcontrollers**: Optimized for memory-constrained environments.
+  - **FreeRTOS**: Manages real-time task scheduling.
+- **Target Hardware**: This firmware is designed for microcontrollers with limited resources (MCUs with 64KB-128KB RAM).
+
+## 🛠️ Setup
+
+### 1. Model Conversion
+Before deploying, convert the Temporal CNN model to TensorFlow Lite format for embedded devices. Use the `convert_model.py` script provided to streamline the conversion process:
+
+```bash
+python convert_model.py --model_path temporal_cnn_model.h5 --output_path temporal_cnn_model.tflite
+```
 ## 🤝 Contribution
 
 We welcome contributions to enhance the SOC estimation model. To contribute:
