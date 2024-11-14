@@ -301,59 +301,59 @@ This project will be deployed on the NXP N94x MCU. Below is an image of the boar
 
 ## 🔬 Detailed Inference Analysis
 
-<table>
+<table style="border-collapse: collapse; width: 100%;">
   <thead>
     <tr>
-      <th style="text-align:left; background-color:#FFD700; color:#000;">🌡️ Temperature</th>
-      <th style="background-color:#87CEEB; color:#000;">⏳ Data Loading (s)</th>
-      <th style="background-color:#87CEEB; color:#000;">⚙️ Preprocessing (s)</th>
-      <th style="background-color:#87CEEB; color:#000;">🧠 Forward Pass (s)</th>
-      <th style="background-color:#87CEEB; color:#000;">💾 Memory (MB)</th>
-      <th style="background-color:#98FB98; color:#000;">📊 MAE</th>
-      <th style="background-color:#98FB98; color:#000;">📉 RMSE</th>
-      <th style="background-color:#98FB98; color:#000;">📈 R²</th>
+      <th style="text-align:left; background-color:#FFD700; color:#000; padding: 8px;">🌡️ Temperature</th>
+      <th style="background-color:#87CEEB; color:#000; padding: 8px;">⏳ Data Loading (s)</th>
+      <th style="background-color:#87CEEB; color:#000; padding: 8px;">⚙️ Preprocessing (s)</th>
+      <th style="background-color:#87CEEB; color:#000; padding: 8px;">🧠 Forward Pass (s)</th>
+      <th style="background-color:#87CEEB; color:#000; padding: 8px;">💾 Memory (MB)</th>
+      <th style="background-color:#98FB98; color:#000; padding: 8px;">📊 MAE</th>
+      <th style="background-color:#98FB98; color:#000; padding: 8px;">📉 RMSE</th>
+      <th style="background-color:#98FB98; color:#000; padding: 8px;">📈 R²</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left; background-color:#FFFACD;">-10°C</td>
-      <td>0.010</td>
-      <td>0.003</td>
-      <td>0.065</td>
-      <td>20.0</td>
-      <td>0.013</td>
-      <td>0.018</td>
-      <td>0.995</td>
+      <td style="text-align:left; background-color:#FFFACD; padding: 8px;">-10°C</td>
+      <td style="padding: 8px;">0.010</td>
+      <td style="padding: 8px;">0.003</td>
+      <td style="padding: 8px;">0.065</td>
+      <td style="padding: 8px;">20.0</td>
+      <td style="padding: 8px;">0.013</td>
+      <td style="padding: 8px;">0.018</td>
+      <td style="padding: 8px;">0.995</td>
     </tr>
     <tr>
-      <td style="text-align:left; background-color:#FFFACD;">0°C</td>
-      <td>0.009</td>
-      <td>0.003</td>
-      <td>0.057</td>
-      <td>18.5</td>
-      <td>0.012</td>
-      <td>0.017</td>
-      <td>0.996</td>
+      <td style="text-align:left; background-color:#FFFACD; padding: 8px;">0°C</td>
+      <td style="padding: 8px;">0.009</td>
+      <td style="padding: 8px;">0.003</td>
+      <td style="padding: 8px;">0.057</td>
+      <td style="padding: 8px;">18.5</td>
+      <td style="padding: 8px;">0.012</td>
+      <td style="padding: 8px;">0.017</td>
+      <td style="padding: 8px;">0.996</td>
     </tr>
     <tr>
-      <td style="text-align:left; background-color:#FFFACD;">10°C</td>
-      <td>0.010</td>
-      <td>0.004</td>
-      <td>0.062</td>
-      <td>19.0</td>
-      <td>0.011</td>
-      <td>0.016</td>
-      <td>0.996</td>
+      <td style="text-align:left; background-color:#FFFACD; padding: 8px;">10°C</td>
+      <td style="padding: 8px;">0.010</td>
+      <td style="padding: 8px;">0.004</td>
+      <td style="padding: 8px;">0.062</td>
+      <td style="padding: 8px;">19.0</td>
+      <td style="padding: 8px;">0.011</td>
+      <td style="padding: 8px;">0.016</td>
+      <td style="padding: 8px;">0.996</td>
     </tr>
     <tr>
-      <td style="text-align:left; background-color:#FFFACD;">25°C</td>
-      <td>0.011</td>
-      <td>0.003</td>
-      <td>0.059</td>
-      <td>19.5</td>
-      <td>0.014</td>
-      <td>0.019</td>
-      <td>0.995</td>
+      <td style="text-align:left; background-color:#FFFACD; padding: 8px;">25°C</td>
+      <td style="padding: 8px;">0.011</td>
+      <td style="padding: 8px;">0.003</td>
+      <td style="padding: 8px;">0.059</td>
+      <td style="padding: 8px;">19.5</td>
+      <td style="padding: 8px;">0.014</td>
+      <td style="padding: 8px;">0.019</td>
+      <td style="padding: 8px;">0.995</td>
     </tr>
   </tbody>
 </table>
@@ -362,7 +362,6 @@ This project will be deployed on the NXP N94x MCU. Below is an image of the boar
 - **Latency**: The forward pass time remains consistent across temperatures, showcasing the model's robustness in latency.
 - **Memory Usage**: Memory requirements are low, making the model suitable for edge deployment on an MCU.
 - **Temperature Impact**: Stable performance across temperatures, indicating reliability in various environmental conditions.
-
 
 ## 🤝 Contribution
 
