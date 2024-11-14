@@ -371,12 +371,15 @@ This project will be deployed on the NXP N94x MCU. Below is an image of the boar
 | **LSTM**         | 0.012                 | 0.005                  | 0.095                 | 25.0               | 0.009 | 0.017 | 0.995 |
 | **FNN**          | 0.008                 | 0.003                  | 0.045                 | 15.0               | 0.015 | 0.020 | 0.990 |
 
-### Insights
+The chart below compares the **inference latency** for different models (Temporal CNN, LSTM, and FNN), broken down by stages of processing (data loading, preprocessing, forward pass, and total inference time).
+
+![Inference Latency Profiling](results/inference_latency_profiling.png)
+
+**Insights**:
 - **Latency**: Temporal CNN offers a balanced latency with a quicker forward pass than LSTM but slightly slower than FNN.
 - **Memory Usage**: Temporal CNN consumes moderate memory, suitable for edge deployment, whereas LSTM's memory usage is higher due to recurrent layers.
 - **Accuracy**: Temporal CNN provides the highest accuracy (lowest MAE and RMSE, highest R²), making it the best choice for SOC estimation tasks that demand precision.
 - **Trade-offs**: FNN has the lowest latency and memory usage but compromises on accuracy, while LSTM has the highest latency and memory usage, making it less suitable for real-time applications compared to Temporal CNN.
-
 
 ## 🤝 Contribution
 
