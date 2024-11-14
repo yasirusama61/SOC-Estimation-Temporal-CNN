@@ -395,7 +395,7 @@ The radar chart below compares the **Mean Absolute Error (MAE)**, **Root Mean Sq
 We welcome contributions to enhance the SOC estimation model. To contribute:
 
 1. Fork this repository.
-2. Create a new branch with a descriptive name (e.g., `improve-ekf-integration`).
+2. Create a new branch with a descriptive name.
 3. Make your modifications, including code, documentation, or tests.
 4. Submit a pull request (PR) with a detailed description of your changes.
 
