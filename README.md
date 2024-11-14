@@ -301,17 +301,18 @@ This project will be deployed on the NXP N94x MCU. Below is an image of the boar
 
 ## 🔬 Detailed Inference Analysis
 
-| Temperature | Data Loading Time (s) | Preprocessing Time (s) | Forward Pass Time (s) | Memory Usage (MB) | MAE   | RMSE  | R²    |
-|-------------|------------------------|-------------------------|------------------------|--------------------|-------|-------|-------|
-| -10°C       | 0.010                 | 0.003                  | 0.065                 | 20.0              | 0.013 | 0.018 | 0.995 |
-| 0°C         | 0.009                 | 0.003                  | 0.057                 | 18.5              | 0.012 | 0.017 | 0.996 |
-| 10°C        | 0.010                 | 0.004                  | 0.062                 | 19.0              | 0.011 | 0.016 | 0.996 |
-| 25°C        | 0.011                 | 0.003                  | 0.059                 | 19.5              | 0.014 | 0.019 | 0.995 |
+| 🌡️ **Temperature** | ⏳ **Data Loading (s)** | ⚙️ **Preprocessing (s)** | 🧠 **Forward Pass (s)** | 💾 **Memory (MB)** | 📊 **MAE** | 📉 **RMSE** | 📈 **R²**  |
+|---------------------|------------------------|-------------------------|------------------------|--------------------|------------|------------|------------|
+| -10°C              | 0.010                  | 0.003                  | 0.065                 | 20.0               | 0.013      | 0.018      | 0.995      |
+| 0°C                | 0.009                  | 0.003                  | 0.057                 | 18.5               | 0.012      | 0.017      | 0.996      |
+| 10°C               | 0.010                  | 0.004                  | 0.062                 | 19.0               | 0.011      | 0.016      | 0.996      |
+| 25°C               | 0.011                  | 0.003                  | 0.059                 | 19.5               | 0.014      | 0.019      | 0.995      |
 
 ### Insights
-- **Latency**: The forward pass time remains fairly consistent across temperatures, showcasing the model's robustness in latency.
-- **Memory Usage**: Memory requirements are within practical limits for edge deployment, suggesting that this model can effectively run on an MCU.
-- **Temperature Impact**: Model performance remains stable across temperatures, indicating reliability in different environmental conditions.
+- **Latency**: The forward pass time remains consistent across temperatures, showcasing the model's robustness in latency.
+- **Memory Usage**: Memory requirements are low, making the model suitable for edge deployment on an MCU.
+- **Temperature Impact**: Stable performance across temperatures, indicating reliability in various environmental conditions.
+
 
 ## 🤝 Contribution
 
