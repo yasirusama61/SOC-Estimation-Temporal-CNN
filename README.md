@@ -381,6 +381,15 @@ The chart below compares the **inference latency** for different models (Tempora
 - **Accuracy**: Temporal CNN provides the highest accuracy (lowest MAE and RMSE, highest R²), making it the best choice for SOC estimation tasks that demand precision.
 - **Trade-offs**: FNN has the lowest latency and memory usage but compromises on accuracy, while LSTM has the highest latency and memory usage, making it less suitable for real-time applications compared to Temporal CNN.
 
+The radar chart below compares the **Mean Absolute Error (MAE)**, **Root Mean Squared Error (RMSE)**, and **R-squared (R²)** values for different models (Temporal CNN, LSTM, FNN). Lower MAE and RMSE values are better, and higher R² values indicate better performance.
+
+![Model Performance Metrics](results/model_performance_metrics.png)
+
+**Insights**:
+- **Temporal CNN** provides the best overall accuracy, with the lowest MAE and RMSE and highest R², making it suitable for precision-demanding tasks.
+- **LSTM** has slightly higher MAE and RMSE compared to Temporal CNN but performs well in terms of R².
+- **FNN** is the least accurate of the three models, with higher MAE and RMSE values, but it may be preferred in applications where lower latency or memory usage is prioritized.
+
 ## 🤝 Contribution
 
 We welcome contributions to enhance the SOC estimation model. To contribute:
