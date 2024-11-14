@@ -425,6 +425,13 @@ python convert_model.py --model_path temporal_cnn_model.h5 --output_path tempora
 ```bash
 python convert_model.py --model_path temporal_cnn_model.h5 --output_path temporal_cnn_model_
 ```
+### 2. Model Integration
+Once the model is converted, embed it within the firmware code:
+1. Convert temporal_cnn_model.tflite to a C array using a tool like xxd or Bin2Header.
+2. Integrate the array directly into real_time_inference_firmware.cpp.
+
+Follow these steps to build and upload the firmware to your target device.
+
 ## 🤝 Contribution
 
 We welcome contributions to enhance the SOC estimation model. To contribute:
