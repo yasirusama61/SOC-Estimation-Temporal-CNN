@@ -301,12 +301,62 @@ This project will be deployed on the NXP N94x MCU. Below is an image of the boar
 
 ## 🔬 Detailed Inference Analysis
 
-| 🌡️ **Temperature** | ⏳ **Data Loading (s)** | ⚙️ **Preprocessing (s)** | 🧠 **Forward Pass (s)** | 💾 **Memory (MB)** | 📊 **MAE** | 📉 **RMSE** | 📈 **R²**  |
-|---------------------|------------------------|-------------------------|------------------------|--------------------|------------|------------|------------|
-| -10°C              | 0.010                  | 0.003                  | 0.065                 | 20.0               | 0.013      | 0.018      | 0.995      |
-| 0°C                | 0.009                  | 0.003                  | 0.057                 | 18.5               | 0.012      | 0.017      | 0.996      |
-| 10°C               | 0.010                  | 0.004                  | 0.062                 | 19.0               | 0.011      | 0.016      | 0.996      |
-| 25°C               | 0.011                  | 0.003                  | 0.059                 | 19.5               | 0.014      | 0.019      | 0.995      |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left; background-color:#FFD700; color:#000;">🌡️ Temperature</th>
+      <th style="background-color:#87CEEB; color:#000;">⏳ Data Loading (s)</th>
+      <th style="background-color:#87CEEB; color:#000;">⚙️ Preprocessing (s)</th>
+      <th style="background-color:#87CEEB; color:#000;">🧠 Forward Pass (s)</th>
+      <th style="background-color:#87CEEB; color:#000;">💾 Memory (MB)</th>
+      <th style="background-color:#98FB98; color:#000;">📊 MAE</th>
+      <th style="background-color:#98FB98; color:#000;">📉 RMSE</th>
+      <th style="background-color:#98FB98; color:#000;">📈 R²</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left; background-color:#FFFACD;">-10°C</td>
+      <td>0.010</td>
+      <td>0.003</td>
+      <td>0.065</td>
+      <td>20.0</td>
+      <td>0.013</td>
+      <td>0.018</td>
+      <td>0.995</td>
+    </tr>
+    <tr>
+      <td style="text-align:left; background-color:#FFFACD;">0°C</td>
+      <td>0.009</td>
+      <td>0.003</td>
+      <td>0.057</td>
+      <td>18.5</td>
+      <td>0.012</td>
+      <td>0.017</td>
+      <td>0.996</td>
+    </tr>
+    <tr>
+      <td style="text-align:left; background-color:#FFFACD;">10°C</td>
+      <td>0.010</td>
+      <td>0.004</td>
+      <td>0.062</td>
+      <td>19.0</td>
+      <td>0.011</td>
+      <td>0.016</td>
+      <td>0.996</td>
+    </tr>
+    <tr>
+      <td style="text-align:left; background-color:#FFFACD;">25°C</td>
+      <td>0.011</td>
+      <td>0.003</td>
+      <td>0.059</td>
+      <td>19.5</td>
+      <td>0.014</td>
+      <td>0.019</td>
+      <td>0.995</td>
+    </tr>
+  </tbody>
+</table>
 
 ### Insights
 - **Latency**: The forward pass time remains consistent across temperatures, showcasing the model's robustness in latency.
