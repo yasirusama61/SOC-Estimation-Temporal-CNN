@@ -21,9 +21,29 @@ Temporal CNNs (Convolutional Neural Networks for time-series data) offer an effi
 - **requirements.txt**: List of required dependencies.
 
 
-## 🚀 Data Processing
+## 📋 Data Preprocessing
 
-For SOC estimation, we used sequences of length 100, capturing the temporal dependencies in the SOC data over a fixed time window.
+The dataset used for training and evaluation in this project is sourced from research conducted by **Dr. Phillip Kollmeyer and colleagues** at McMaster University. The data has been **preprocessed** by the authors to facilitate seamless model training. No additional preprocessing is applied in this project.
+
+### Features
+The dataset includes the following preprocessed features:
+- **Voltage [V]**
+- **Current [A]**
+- **Temperature [°C]**
+- **Rolling Average of Voltage**
+- **Rolling Average of Current**
+
+The preprocessing steps, such as **scaling** or **normalization**, were applied by the dataset authors. These steps ensure that the data is ready for use in machine learning models without further transformations.
+
+### Importance
+- **Transparency**: Clearly states that preprocessing was already handled by the dataset authors, reducing ambiguity for users.
+- **Focus on Model**: Enables the project to focus entirely on **model architecture**, **training**, **evaluation**, and **deployment** rather than data transformation.
+- **Attribution**: Acknowledges and respects the preprocessing work done by the original authors.
+
+For further details about the dataset and its preprocessing, refer to the original dataset publication:
+- **[LG 18650HG2 Li-ion Battery Dataset on Mendeley](https://data.mendeley.com/datasets/cp3473x7xv/3)**
+
+> **Note**: The dataset is not included in this repository but can be downloaded directly from the author's repository.
 
 ## 🏗️ Model Architecture
 
