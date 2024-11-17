@@ -5,12 +5,13 @@
 Test Script for Temporal CNN Model for SOC Estimation
 Author: Usama Yasir Khan
 Description: This script tests the trained Temporal CNN model on provided test data
-and generates evaluation metrics and visualizations.
+and generates evaluation metrics and visualizations, including residual and error analysis.
 """
 
 import os
 import numpy as np
 import pandas as pd
+import scipy.io
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import tensorflow as tf
 import matplotlib.pyplot as plt
@@ -61,7 +62,7 @@ def evaluate_model(model, X_test, y_test, temp_label):
     plt.savefig(f"results/soc_comparison_{temp_label.replace('°', '')}.png")
     plt.show()
 
-    # Plot Residuals
+    # Plot Residuals (Actual - Predicted)
     residuals = y_test - y_pred.flatten()
     plt.figure(figsize=(12, 6))
     plt.scatter(y_pred.flatten(), residuals, alpha=0.6, edgecolor='k')
@@ -71,6 +72,18 @@ def evaluate_model(model, X_test, y_test, temp_label):
     plt.ylabel("Residuals (Actual - Predicted)")
     plt.grid(True)
     plt.savefig(f"results/soc_residuals_{temp_label.replace('°', '')}.png")
+    plt.show()
+
+    # Plot Prediction Error (Absolute Error)
+    prediction_error = np.abs(residuals)
+    plt.figure(figsize=(12, 6))
+    plt.plot(prediction_error, label='Prediction Error', color='purple')
+    plt.title(f"Prediction Error Over Samples - {temp_label}")
+    plt.xlabel("Samples")
+    plt.ylabel("Absolute Error")
+    plt.grid(True)
+    plt.legend()
+    plt.savefig(f"results/prediction_error_{temp_label.replace('°', '')}.png")
     plt.show()
 
 # Main execution
