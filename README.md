@@ -279,6 +279,31 @@ This evaluation underscores the model’s reliability for complex SOC estimation
 
 > **Note**: The internal test data is not shared in this repository to comply with company confidentiality policies.
 
+## 🧠 Bayesian CNN Training and Evaluation
+
+To enhance the reliability of SOC predictions, we extended the Temporal CNN model to a **Bayesian CNN**, enabling uncertainty quantification. The Bayesian CNN provides confidence intervals for predictions, making it ideal for critical applications like battery management systems.
+
+### Training Insights
+The Bayesian CNN was trained using the same preprocessed SOC estimation dataset as the Temporal CNN, with the following setup:
+- **Input Features**: Voltage, Current, Temperature, Avg_voltage, Avg_current
+- **Target Variable**: State of Charge (SOC)
+- **Optimizer**: Adam
+- **Loss Function**: Mean Squared Error (MSE)
+- **Batch Size**: 72
+- **Epochs**: 40
+
+### Training Curve
+The training and validation loss over 40 epochs are shown below:
+
+![Bayesian CNN Training Curve](results/bayesian_cnn_training_curve.png)
+
+#### Key Observations:
+1. **Rapid Convergence**: The training loss dropped steeply during the initial epochs, indicating effective learning.
+2. **Stabilization**: Both training and validation loss stabilized after ~10 epochs, demonstrating a well-trained model.
+3. **Generalization**: The small gap between training and validation loss highlights robust generalization to unseen data.
+
+> **Note**: The use of Bayesian CNN ensures confidence in SOC predictions by quantifying uncertainties, which can further improve safety and decision-making in real-world applications.
+
 ## ⏲️ Model Inference Time on multiple temperature
 
 The following are the average inference times for the model across different ambient temperatures. These values are measured in milliseconds and calculated over multiple runs to ensure stable averages.
