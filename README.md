@@ -297,7 +297,7 @@ The training and validation loss over 40 epochs are shown below:
 
 ![Bayesian CNN Training Curve](results/bayesian_cnn_training_curve.png)
 
-#### Key Observations:
+#### Observations:
 1. **Rapid Convergence**: The training loss dropped steeply during the initial epochs, indicating effective learning.
 2. **Stabilization**: Both training and validation loss stabilized after ~10 epochs, demonstrating a well-trained model.
 3. **Generalization**: The small gap between training and validation loss highlights robust generalization to unseen data.
