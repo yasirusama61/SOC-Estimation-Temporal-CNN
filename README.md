@@ -91,10 +91,6 @@ On the left, the high-level architecture outlines the flow of data through each 
 
 ---
 
-### 🤖 Why Temporal CNN?
-
-The Temporal CNN is chosen for its efficiency in handling sequential data without the complexity of recurrent connections. By stacking convolutional layers, the model captures temporal dependencies and local patterns, making it particularly effective for SOC data with fluctuating trends across different temperatures. Regularization techniques such as dropout and L2 regularization ensure robustness, reducing overfitting even with complex SOC patterns.
-
 ### 📊 Model Summary
 
 Below is a summary of the model architecture, detailing the output shapes and parameters for each layer:
